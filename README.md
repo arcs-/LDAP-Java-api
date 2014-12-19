@@ -58,7 +58,9 @@ connection.updateUser(student.getUID(), mods);
 ```
 You can also DirContext.ADD_ATTRIBUTE and DirContext.REMOVE_ATTRIBUTE
 
-### There are more methods but I think they are easy to understand, but don't hesitate to contact with questions
+
+
+There are more methods but I think they are easy to understand, but don't hesitate to contact with questions
 
 ##License
 The MIT License (MIT)
