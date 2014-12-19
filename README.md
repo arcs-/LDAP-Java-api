@@ -16,7 +16,7 @@ Of course if you find something very important just send me a mail or fork this 
 
 ##Usage
 
-#Instantiation
+###Instantiation
 ```java
 try {
          connection = new LDAPConnection(Settings.DB_HOST,
@@ -32,7 +32,7 @@ try {
 ```
 You can, if you need, specify another port. Default: 389
 
-#Get an user
+###Get an user
 ```java
 SearchResult result = connection.getUser(username);
 
@@ -48,7 +48,7 @@ try {
 }
 ```
 
-#Update user fields
+###Update user fields
 ```java
 ModificationItem[] mods = new ModificationItem[2];
 mods[0] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, new BasicAttribute("displayName", student.getDisplayName()));
@@ -58,7 +58,7 @@ connection.updateUser(student.getUID(), mods);
 ```
 You can also DirContext.ADD_ATTRIBUTE and DirContext.REMOVE_ATTRIBUTE
 
-# There are more methods but I think they are easy to understand, but don't hesitate to contact with questions
+### There are more methods but I think they are easy to understand, but don't hesitate to contact with questions
 
 ##License
 The MIT License (MIT)
