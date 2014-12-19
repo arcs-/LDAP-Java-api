@@ -19,16 +19,16 @@ Of course if you find something very important just send me a mail or fork this 
 ###Instantiation
 ```java
 try {
-         connection = new LDAPConnection(Settings.DB_HOST,
-                                         Settings.DB_USER_DN,
-                                         Settings.DB_LOGIN,
-                                         Settings.DB_PASSWORD);
-        } catch (AuthenticationException e) {
-            System.err.println("LDAP -> Wrong Authentication");
-        } catch (NamingException e) {
-            System.err.println("LDAP -> Couldn't connect: " + e.getMessage());
-            e.printStackTrace();
-        }
+    connection = new LDAPConnection(Settings.DB_HOST,
+                                    Settings.DB_USER_DN,
+                                    Settings.DB_LOGIN,
+                                    Settings.DB_PASSWORD);
+} catch (AuthenticationException e) {
+    System.err.println("LDAP -> Wrong Authentication");
+} catch (NamingException e) {
+    System.err.println("LDAP -> Couldn't connect: " + e.getMessage());
+    e.printStackTrace();
+}
 ```
 You can, if you need, specify another port. Default: 389
 
@@ -52,7 +52,7 @@ try {
 ```java
 ModificationItem[] mods = new ModificationItem[2];
 mods[0] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, new BasicAttribute("displayName", student.getDisplayName()));
-mods[2] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, new BasicAttribute("mail", "'"+student.getPrivateMail()));
+mods[2] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, new BasicAttribute("mail", student.getPrivateMail()));
 
 connection.updateUser(student.getUID(), mods);
 ```
