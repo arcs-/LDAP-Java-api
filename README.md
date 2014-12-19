@@ -12,7 +12,7 @@ providing a basic database interface.
 - Custom filtering
 
 It was my intention not to implement everything, I just wanted a very simple and very user-friendly API.
-Of course if you find something very impotent just send me a mail or fork this project and i will add it.
+Of course if you find something very important just send me a mail or fork this project and i will add it.
 
 ##Usage
 
